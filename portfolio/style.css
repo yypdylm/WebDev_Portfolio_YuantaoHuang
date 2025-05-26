@@ -1,0 +1,44 @@
+/* 作品集页面专属样式 */
+.portfolio-content {
+    padding: 6rem 2rem 4rem; /* 调整顶部间距，避开固定导航栏 */
+}
+
+#works {
+    margin-top: 3rem;
+}
+
+#works .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+#works video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#works video:hover {
+    transform: scale(1.02);
+}
+
+.timeline {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.timeline li {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.timeline li::before {
+    content: '•';
+    color: #ffd100;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
