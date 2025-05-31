@@ -1,0 +1,150 @@
+/* UN 全球目标页面专属样式 */
+.un-global-goals-content {
+    padding: 6rem 2rem 4rem; /* 调整顶部间距，避开固定导航栏 */
+}
+
+.ocean-hero {
+    height: 50vh;
+    background: 
+        linear-gradient(rgb(33, 144, 255), rgb(0, 11, 107)),
+        url('img/ocean-hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.ocean-hero .hero-content {
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.ocean-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.ocean-hero p {
+    font-size: 1.2rem;
+}
+
+.section-with-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    /* 删除了 align-items: center; 以允许内容从顶部开始 */
+}
+
+.section-with-image .text-content {
+    padding: 1rem 0; /* 移除左右内边距，保持上下间距 */
+    align-self: start; /* 关键修改：使文本内容从顶部开始 */
+}
+
+.section-with-image .image-content img {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.section-with-image .image-content img:hover {
+    transform: scale(1.02);
+}
+
+#call-to-action {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+#call-to-action h2 {
+    margin-bottom: 1rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .section-with-image {
+        grid-template-columns: 1fr;
+    }
+}
+
+#call-to-action {
+    padding: 6rem 0; /* 降低整体高度 */
+    background: white; /* 纯白色背景 */
+}
+
+#call-to-action .content-wrapper {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem 2rem; /* 减少内边距 */
+    max-width: 600px; /* 控制文本区域宽度 */
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* 更柔和的阴影 */
+    border: 1px solid #e5e7eb; /* 浅灰色边框 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#call-to-action .content-wrapper:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+#call-to-action h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+#call-to-action p {
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    color: #4b5563;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+}
+
+#call-to-action a {
+    display: inline-block;
+    background: #1e40af;
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1.75rem; /* 减小按钮尺寸 */
+    border-radius: 9999px;
+    box-shadow: 0 3px 10px rgba(30, 64, 175, 0.15);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+#call-to-action a:hover {
+    background: #1e3a8a;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(30, 64, 175, 0.2);
+}
+
+#call-to-action a i {
+    margin-left: 0.4rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    #call-to-action {
+        padding: 4rem 0;
+    }
+    
+    #call-to-action .content-wrapper {
+        padding: 2rem 1.5rem;
+        max-width: 90%;
+        border-radius: 10px;
+    }
+    
+    #call-to-action h2 {
+        font-size: 1.4rem;
+    }
+    
+    #call-to-action p {
+        font-size: 0.95rem;
+    }
+}
