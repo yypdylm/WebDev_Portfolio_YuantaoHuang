@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Design-Thinking - Yuantao H</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../homepage/style.css"> <!-- 全局样式复用 -->
+    <link rel="stylesheet" href="style.css"> <!-- 专属样式 -->
+</head>
+<body>
+    <!-- 导航栏（复用全局样式） -->
+    <nav class="fixed-nav">
+        <ul class="nav-list">
+            <li><a href="../homepage/index.html" class="nav-link">Home Page</a></li>
+            <li><a href="../portfolio/index.html" class="nav-link">Portfolio</a></li>
+            <li><a href="index.html" class="nav-link current">Design-Thinking</a></li>
+            <li><a href="../un-global-goals/index.html" class="nav-link">UN-Global-Goals</a></li>
+        </ul>
+    </nav>
+
+    <main class="content portfolio-content">
+        <!-- 新增间距容器，控制整体内容下移 -->
+        <div class="content-spacing">
+            <div class="container">
+                <!-- 技术栈标题与引言 -->
+                <section id="tech-stack-intro">
+                    <h2>Tech Stack & Tools</h2>
+                    <p>This project applies Design-Thinking methodology, focusing on modular development based on repository structure (e.g., <code>homepage</code>, <code>portfolio</code> modules) to ensure code maintainability and user experience. Below are the core technologies and tools used:</p>
+                </section>
+
+                <!-- 技术栈展示（水平排列 + 交互效果） -->
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <img src="img/html.png" class="square-logo" alt="HTML5">
+                        <div class="tech-desc">
+                            <h3>HTML5</h3>
+                            <p>HTML is the core of web development, defining the content and structure of a webpage. It organizes text, images, and multimedia through tags and supports page navigation. Together with CSS and JavaScript, HTML builds the framework and functionality of modern webpages.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <img src="img/css.svg" class="square-logo" alt="CSS3">
+                        <div class="tech-desc">
+                            <h3>CSS3</h3>
+                            <p>CSS (Cascading Style Sheets) is essential in web development, controlling the visual presentation and layout of a webpage. It styles HTML elements with properties like colors, fonts, and spacing, ensuring an attractive and consistent design. By working with HTML and JavaScript, CSS enhances user experience through responsive and visually appealing interfaces.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <img src="img/js.png" class="square-logo" alt="JavaScript">
+                        <div class="tech-desc">
+                            <h3>JavaScript</h3>
+                            <p>JavaScript is a key programming language in web development, adding interactivity and dynamic functionality to webpages. It enables features like form validation, animations, and real-time updates by manipulating HTML and CSS. Integrated with HTML and CSS, JavaScript creates engaging, user-driven web experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 By Yuantao H.</p>
+    </footer>
+
+    <script src="main.js"></script> <!-- 交互脚本 -->
+</body>
+</html>
