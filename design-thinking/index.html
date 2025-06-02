@@ -15,8 +15,8 @@
         <ul class="nav-list">
             <li><a href="../homepage/index.html" class="nav-link">Home Page</a></li>
             <li><a href="../portfolio/index.html" class="nav-link">Portfolio</a></li>
-            <li><a href="index.html" class="nav-link current">Design-Thinking</a></li>
-            <li><a href="../un/index.html" class="nav-link">UN-Global-Goals</a></li>
+            <li><a href="index.html" class="nav-link current">Design Thinking</a></li>
+            <li><a href="../un/index.html" class="nav-link">UN Global Goals</a></li>
             <li><a href="#" class="nav-link">Accessibility Statement</a></li>
             <li><a href="../curtain/index.html" class="nav-link">Behind the Curtain</a></li>
         </ul>
@@ -26,7 +26,7 @@
         <div class="content-spacing">
             <div class="container">
                 <h2>Design Thinking Process for My Website</h2>
-                <p>Design thinking is a human - centered approach to innovation that emphasizes empathy, ideation, and prototyping. Here's how I applied design thinking to my website:</p>
+                <p>The design and construction of my website went through the following several steps.</p>
 
                 <!-- Design Steps with Flow Diagram -->
                 <div class="design-steps-flow">
@@ -41,8 +41,8 @@
                                 <img src="./img/1.png" alt="User Interview Process" />
                             </div>
                             <div class="step-description">
-                                <p>To understand the needs of my users, I conducted interviews and surveys with potential employers and peers. I asked about their expectations for a portfolio website, pain points in navigation, and preferred content formats. This helped me identify key user groups and their specific requirements.</p>
-                                <p class="example-highlight">Example: In one interview, a UX designer emphasized the importance of visual hierarchy and intuitive navigation for quick information access.</p>
+                                <p>In order to create a website that meets the needs of users, I must first understand the <mark>target group</mark>. So, I collected everyone's opinions in various ways. For example, I communicated with my classmates and family members and listen to their suggestions on the my website. From these exchanges and feedbacks, I gradually understood everyone's needs, which laid an important foundation for the subsequent website design.</p>
+                                <p class="example-highlight">On the left: This is the picture which my dad is giving feedbacks about what elements must a good website contain.</p>
                             </div>
                         </div>
                     </div>
@@ -55,11 +55,15 @@
                         </div>
                         <div class="step-content">
                             <div class="step-image">
-                                <img src="img/define.jpg" alt="Problem Definition" />
+                                <div class="skill-display">
+                                    <div class="skill-word" id="skillWord">Click the button pls</div>
+                                    <button id="showSkillBtn" class="interactive-btn">Show My Skills</button>
+                                </div>
+                                <button id="accessibilityBtn" class="accessibility-btn">Accessibility</button>
                             </div>
                             <div class="step-description">
-                                <p>Based on feedback, I defined the core problem: creating a portfolio that showcases technical skills while providing an accessible narrative of my design process. Key challenges included balancing visual appeal with content clarity and ensuring mobile responsiveness.</p>
-                                <p class="example-highlight">Example: I created user personas and journey maps to visualize common scenarios and identify areas for improvement.</p>
+                                <p>Based on the feedbacks, I gradually found out my goal: <mark>Creating a website that shows my technical skills and is accessible.</mark> So I have to balance visual appeal with content clarity and ensuring mobile responsiveness.</p>
+                                <p class="example-highlight">On the left: Can you find out the mystery of the two buttons?</p>
                             </div>
                         </div>
                     </div>
@@ -72,11 +76,11 @@
                         </div>
                         <div class="step-content">
                             <div class="step-image">
-                                <img src="img/ideate.jpg" alt="Brainstorming Session" />
+                                <img src="./img/3.png" alt="Brainstorming Session" />
                             </div>
                             <div class="step-description">
-                                <p>I explored various layout options through sketching and wireframing. Key ideas included modular content blocks, interactive elements for project details, and a consistent color scheme reflecting professionalism and creativity.</p>
-                                <p class="example-highlight">Example: I experimented with card-based layouts to present projects, allowing users to focus on specific work without information overload.</p>
+                                <p>I explored various layout options through sketching and wireframing. And I found some ideas included modular content blocks, interactive elements for project details, and a consistent color scheme reflecting professionalism and creativity.</p>
+                                <p class="example-highlight">E.g. I designed card-based layouts to present projects, which allows users to focus on specific work without information overload.</p>
                             </div>
                         </div>
                     </div>
@@ -92,25 +96,21 @@
                                 <img src="./img/4.png" alt="Website Prototyping" />
                             </div>
                             <div class="step-description">
-                                <p>I built a low-fidelity prototype using paper and digital tools to test navigation flow. This evolved into a high-fidelity prototype with interactive elements, allowing me to simulate user interactions and gather feedback on usability.</p>
-                                <p class="example-highlight">Example: The initial prototype revealed that users struggled to find my contact information, leading to its prominent placement in subsequent versions.</p>
+                                <p>In the Prototype step, I have doodling on papers to design the website layout, roughly placing the header, sections, and footer. And it helped me visualize how things would look. At the same time, in my Web Development class, I learned about prototyping. I used that knowledge to create a simple digital version of my site. I also focused on basic elements like color schemes and font choices to match my vision. This way, I could test and see what worked before going further.</p>
+                                <p class="example-highlight">On the left: This is one of my doodle of my homepage.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Test -->
+                    <!-- Final -->
                     <div class="step-card" data-step="5">
                         <div class="step-header">
                             <div class="step-number">5</div>
-                            <h3>Test</h3>
+                            <h3>Final Project</h3>
                         </div>
                         <div class="step-content">
-                            <div class="step-image">
-                                <img src="img/test.jpg" alt="User Testing Session" />
-                            </div>
                             <div class="step-description">
-                                <p>User testing with 5 participants uncovered issues with mobile navigation and content hierarchy. I iterated on the design, simplifying menus and enhancing visual cues for important sections.</p>
-                                <p class="example-highlight">Example: A participant suggested adding hover effects to project cards, which I implemented to improve interaction and highlight clickable elements.</p>
+                                <p>After countless revisions, I finally finished my entire web design …………</p>
                             </div>
                         </div>
                     </div>
@@ -123,31 +123,8 @@
         <p>© 2025 By Yuantao H.</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 键盘导航支持
-            const navLinks = document.querySelectorAll('.nav-link');
-            let currentIndex = 0;
-
-            navLinks.forEach((link, index) => {
-                link.addEventListener('focus', () => {
-                    currentIndex = index;
-                });
-            });
-
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowRight') {
-                    e.preventDefault();
-                    currentIndex = (currentIndex + 1) % navLinks.length;
-                    navLinks[currentIndex].focus();
-                } else if (e.key === 'ArrowLeft') {
-                    e.preventDefault();
-                    currentIndex = (currentIndex - 1 + navLinks.length) % navLinks.length;
-                    navLinks[currentIndex].focus();
-                }
-            });
-        });
-    </script>
+    
     <script src="main.js"></script> <!-- 交互脚本 -->
+    <script src="../homepage/main.js"></script>
 </body>
 </html>

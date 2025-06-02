@@ -1,6 +1,6 @@
-/* 内容整体下移 */
+/* 内容整体下移（关键调整） */
 .content-spacing {
-    padding-top: 32.5px;
+    padding-top: 32.5px; /* 增大顶部间距，将内容整体下移更多 */
     padding-bottom: 40px;
 }
 
@@ -39,8 +39,8 @@
 .step-number {
     width: 36px;
     height: 36px;
-    background-color: #3498db;
-    color: white;
+    background-color: #ffd100;
+    color: #000000ef;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -65,6 +65,9 @@
     flex: 1;
     min-width: 300px;
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .step-image img {
@@ -89,7 +92,7 @@
     background-color: #f7f7f7;
     padding: 0.75rem;
     border-radius: 6px;
-    border-left: 4px solid #3498db;
+    border-left: 4px solid #ffd100;
     font-style: italic;
 }
 
@@ -103,4 +106,67 @@
     .step-description {
         padding: 1rem 1.5rem;
     }
+}
+
+/* 步骤2特殊样式 */
+#showSkillBtn {
+    width: 100%;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#accessibilityBtn {
+    width: 68%;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#showSkillBtn {
+    background-color: #ffd100;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+}
+
+#showSkillBtn:hover {
+    background-color: #ffd100;
+    transform: translateY(-2px);
+}
+
+#accessibilityBtn {
+    background-color: #ffd100;
+    color: #ffd100;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 10px 15px rgba(255, 230, 0, 0.3);
+}
+
+#accessibilityBtn:hover {
+    background-color: #ffd100;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(88, 88, 88, 0.4);
+}
+
+.skill-display {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.skill-word {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    min-height: 2.5rem;
+    color: #333;
 }

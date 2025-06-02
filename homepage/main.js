@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 键盘导航支持
     const navLinks = document.querySelectorAll('.nav-link');
-    let currentIndex = 0;
+    let currentIndex = -1;
     
     navLinks.forEach((link, index) => {
         link.addEventListener('focus', () => {

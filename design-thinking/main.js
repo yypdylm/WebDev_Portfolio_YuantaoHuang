@@ -1,18 +1,19 @@
-// Design-Thinking 页面专属脚本
 document.addEventListener('DOMContentLoaded', () => {
-    // 平滑滚动
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+    // 技能展示按钮交互
+    const skillBtn = document.getElementById('showSkillBtn');
+    const skillWord = document.getElementById('skillWord');
+    const skills = ['HTML5', 'CSS3', 'JavaScript',':)'];
+    let currentSkillIndex = 0;
 
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
+    if (skillBtn && skillWord) {
+        skillBtn.addEventListener('click', () => {
+            if (currentSkillIndex < skills.length) {
+                skillWord.textContent = skills[currentSkillIndex];
+                currentSkillIndex++;
+            }
+            if (currentSkillIndex === skills.length) {
+                skillBtn.textContent = "Enjoy your day!";
             }
         });
-    });
+    }
 });

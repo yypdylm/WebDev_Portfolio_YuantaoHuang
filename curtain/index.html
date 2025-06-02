@@ -62,31 +62,7 @@
         <p>© 2025 By Yuantao H.</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 键盘导航支持
-            const navLinks = document.querySelectorAll('.nav-link');
-            let currentIndex = 0;
-
-            navLinks.forEach((link, index) => {
-                link.addEventListener('focus', () => {
-                    currentIndex = index;
-                });
-            });
-
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowRight') {
-                    e.preventDefault();
-                    currentIndex = (currentIndex + 1) % navLinks.length;
-                    navLinks[currentIndex].focus();
-                } else if (e.key === 'ArrowLeft') {
-                    e.preventDefault();
-                    currentIndex = (currentIndex - 1 + navLinks.length) % navLinks.length;
-                    navLinks[currentIndex].focus();
-                }
-            });
-        });
-    </script>
+    <script src="../homepage/main.js"></script>
     <script src="main.js"></script> <!-- 交互脚本 -->
 </body>
 </html>
