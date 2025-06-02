@@ -1,199 +1,119 @@
-/* 内容整体下移（关键调整） */
+/* ========== 整体内容下移 ========== */
 .content-spacing {
-    padding-top: 32.5px; /* 增大顶部间距，将内容整体下移更多 */
+    padding-top: 32.5px;
     padding-bottom: 40px;
 }
 
-/* 主要内容卡片样式 */
-.section-card {
+/* ========== Grid 布局 ========== */
+/* 定义为三行两列的网格 */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;      /* 两列，各占 1fr */
+    grid-template-rows: auto auto auto;  /* 三行，高度根据内容自适应 */
+    gap: 2rem;                           /* 行与列之间的间距 */
+}
+
+/* 第一行-左: #screenshot1-card 位于 grid-row: 1; grid-column: 1 */
+/* 第一行-右: #screenshot2-card 位于 grid-row: 1; grid-column: 2 */
+
+/* 第二行-左: #part2-card 位于 grid-row: 2; grid-column: 1 */
+
+/* 第二行与第三行-右: part3-card 跨两行 */
+.part3-card {
+    grid-column: 2;          /* 位于第 2 列 */
+    grid-row: 2 / span 2;    /* 从第 2 行开始，跨 2 行（占据第 2、3 行） */
+}
+
+/* 第三行-左: #part4-card 位于 grid-row: 3; grid-column: 1 */
+
+/* ========== 卡片（card）基础样式 ========== */
+.card {
     background-color: #fff;
+    padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
-.section-card:hover {
-    transform: translateY(-5px);
+/* 鼠标悬停时卡片微微放大并加深阴影 */
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-.section-card h2 {
+/* 卡片内标题样式 */
+.card h3 {
     margin-top: 0;
     color: #333;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 0.75rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
 }
 
-/* 技术栈水平排列 + 交互效果 */
+/* 卡片内段落样式 */
+.card p {
+    color: #555;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}
+
+/* ========== 截图卡片样式 ========== */
+.screenshot-card img.screenshot-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 0.75rem;
+    object-fit: contain;
+}
+
+/* ========== 内部 tech-stack（第三部分）样式 ========== */
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem; /* 技术项之间的间距 */
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .tech-item {
-    flex: 1 1 calc(33.333% - 2rem); /* 每个技术项占据三分之一宽度减去间距 */
-    min-width: 300px; /* 最小宽度 */
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease; /* 平滑过渡效果 */
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 200px;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fafafa;
 }
 
 .tech-item:hover {
-    transform: scale(1.05); /* 鼠标悬停时内容放大5% */
+    transform: scale(1.04);
+    box-shadow: 0 5px 14px rgba(0,0,0,0.1);
 }
 
 .square-logo {
-    width: 100px; /* 图标宽度 */
-    height: 100px; /* 图标高度 */
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
-.tech-desc h3 {
-    margin-top: 0;
+.tech-desc h5 {
+    margin: 0.5rem 0 0.5rem 0;
     color: #333;
+    font-size: 1rem;
 }
 
 .tech-desc p {
     color: #666;
-    line-height: 1.6;
-}
-
-/* 1. 代码截图部分样式 */
-.screenshot-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.screenshot-card {
-    flex: 1 1 calc(33.333% - 1.5rem);
-    min-width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.screenshot-card:hover {
-    transform: translateY(-5px);
-}
-
-.screenshot-placeholder {
-    height: 200px;
-    background-color: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid #eee;
-}
-
-.placeholder-text {
-    color: #999;
-    font-style: italic;
-}
-
-.screenshot-title {
-    margin: 1rem;
-    color: #333;
-}
-
-.screenshot-desc {
-    margin: 0 1rem 1.5rem;
-    color: #666;
+    font-size: 0. nine rem; /* 按需调整字号 */
     line-height: 1.5;
 }
 
-/* 2. 挑战性部分解释样式 */
-.challenge-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.challenge-card {
-    flex: 1 1 calc(50% - 1.5rem);
-    min-width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    padding: 1.5rem;
-    transition: transform 0.3s ease;
-}
-
-.challenge-card:hover {
-    transform: translateY(-5px);
-}
-
-.challenge-title {
-    margin-top: 0;
-    color: #333;
-}
-
-.challenge-content {
-    margin-top: 1rem;
-}
-
-.challenge-problem, .challenge-solution, .challenge-learned {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.challenge-placeholder {
-    margin: 0 0 1rem;
-    color: #666;
-    line-height: 1.5;
-    min-height: 40px;
-    background-color: #f9f9f9;
-    padding: 0.5rem;
-    border-radius: 4px;
-}
-
-/* 4. 学习收获部分样式 */
-.learning-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.learning-card {
-    flex: 1 1 calc(50% - 1.5rem);
-    min-width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    padding: 1.5rem;
-    display: flex;
-    gap: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.learning-card:hover {
-    transform: translateY(-5px);
-}
-
-.learning-icon {
-    font-size: 2rem;
-    min-width: 40px;
-    text-align: center;
-}
-
-.learning-title {
-    margin-top: 0;
-    color: #333;
-}
-
-.learning-content {
-    color: #666;
-    line-height: 1.5;
-}
-
-/* 响应式设计（小屏幕下垂直排列） */
+/* ========== 响应式设计 ========== */
 @media (max-width: 768px) {
-    .tech-item, .screenshot-card, .challenge-card, .learning-card {
-        flex-basis: 100%; /* 在小屏幕上，每个卡片占据整行 */
+    /* 小屏幕时，将网格退化成块布局 */
+    .grid-container {
+        display: block;
+    }
+    .card, .tech-item {
+        margin-bottom: 2rem;
     }
 }
