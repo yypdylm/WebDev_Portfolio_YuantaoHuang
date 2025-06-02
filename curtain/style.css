@@ -1,0 +1,49 @@
+/* 内容整体下移（关键调整） */
+.content-spacing {
+    padding-top: 32.5px; /* 增大顶部间距，将内容整体下移更多 */
+    padding-bottom: 40px;
+}
+
+/* 技术栈水平排列 + 交互效果 */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* 技术项之间的间距 */
+}
+
+.tech-item {
+    flex: 1 1 calc(33.333% - 2rem); /* 每个技术项占据三分之一宽度减去间距 */
+    min-width: 300px; /* 最小宽度 */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease; /* 平滑过渡效果 */
+}
+
+.tech-item:hover {
+    transform: scale(1.05); /* 鼠标悬停时内容放大5% */
+}
+
+.square-logo {
+    width: 100px; /* 图标宽度 */
+    height: 100px; /* 图标高度 */
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.tech-desc h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.tech-desc p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 响应式设计（小屏幕下垂直排列） */
+@media (max-width: 768px) {
+    .tech-item {
+        flex-basis: 100%; /* 在小屏幕上，每个技术项占据整行 */
+    }
+}

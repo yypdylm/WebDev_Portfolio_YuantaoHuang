@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <title>Design-Thinking</title>
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../homepage/style.css"> <!-- 全局样式复用 -->
     <link rel="stylesheet" href="style.css"> <!-- 专属样式 -->
 </head>
+
 <body>
     <!-- 导航栏（复用全局样式） -->
     <nav class="fixed-nav">
@@ -15,40 +17,101 @@
             <li><a href="../portfolio/index.html" class="nav-link">Portfolio</a></li>
             <li><a href="index.html" class="nav-link current">Design-Thinking</a></li>
             <li><a href="../un/index.html" class="nav-link">UN-Global-Goals</a></li>
+            <li><a href="#" class="nav-link">Accessibility Statement</a></li>
+            <li><a href="../curtain/index.html" class="nav-link">Behind the Curtain</a></li>
         </ul>
     </nav>
 
-    <main class="content portfolio-content">
-        <!-- 新增间距容器，控制整体内容下移 -->
+    <main class="content design-thinking-content">
         <div class="content-spacing">
             <div class="container">
-                <!-- 技术栈标题与引言 -->
-                <section id="tech-stack-intro">
-                    <h2>Tech Stack & Tools</h2>
-                    <p>This project applies Design-Thinking methodology, focusing on modular development based on repository structure (e.g., <code>homepage</code>, <code>portfolio</code> modules) to ensure code maintainability and user experience. Below are the core technologies and tools used:</p>
-                </section>
+                <h2>Design Thinking Process for My Website</h2>
+                <p>Design thinking is a human - centered approach to innovation that emphasizes empathy, ideation, and prototyping. Here's how I applied design thinking to my website:</p>
 
-                <!-- 技术栈展示（水平排列 + 交互效果） -->
-                <div class="tech-stack">
-                    <div class="tech-item">
-                        <img src="img/html.png" class="square-logo" alt="HTML5">
-                        <div class="tech-desc">
-                            <h3>HTML5</h3>
-                            <p>HTML is the core of web development, defining the content and structure of a webpage. It organizes text, images, and multimedia through tags and supports page navigation. Together with CSS and JavaScript, HTML builds the framework and functionality of modern webpages.</p>
+                <!-- Design Steps with Flow Diagram -->
+                <div class="design-steps-flow">
+                    <!-- Empathize -->
+                    <div class="step-card" data-step="1">
+                        <div class="step-header">
+                            <div class="step-number">1</div>
+                            <h3>Empathize</h3>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-image">
+                                <img src="./img/1.png" alt="User Interview Process" />
+                            </div>
+                            <div class="step-description">
+                                <p>To understand the needs of my users, I conducted interviews and surveys with potential employers and peers. I asked about their expectations for a portfolio website, pain points in navigation, and preferred content formats. This helped me identify key user groups and their specific requirements.</p>
+                                <p class="example-highlight">Example: In one interview, a UX designer emphasized the importance of visual hierarchy and intuitive navigation for quick information access.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="tech-item">
-                        <img src="img/css.svg" class="square-logo" alt="CSS3">
-                        <div class="tech-desc">
-                            <h3>CSS3</h3>
-                            <p>CSS (Cascading Style Sheets) is essential in web development, controlling the visual presentation and layout of a webpage. It styles HTML elements with properties like colors, fonts, and spacing, ensuring an attractive and consistent design. By working with HTML and JavaScript, CSS enhances user experience through responsive and visually appealing interfaces.</p>
+
+                    <!-- Define -->
+                    <div class="step-card" data-step="2">
+                        <div class="step-header">
+                            <div class="step-number">2</div>
+                            <h3>Define</h3>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-image">
+                                <img src="img/define.jpg" alt="Problem Definition" />
+                            </div>
+                            <div class="step-description">
+                                <p>Based on feedback, I defined the core problem: creating a portfolio that showcases technical skills while providing an accessible narrative of my design process. Key challenges included balancing visual appeal with content clarity and ensuring mobile responsiveness.</p>
+                                <p class="example-highlight">Example: I created user personas and journey maps to visualize common scenarios and identify areas for improvement.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="tech-item">
-                        <img src="img/js.png" class="square-logo" alt="JavaScript">
-                        <div class="tech-desc">
-                            <h3>JavaScript</h3>
-                            <p>JavaScript is a key programming language in web development, adding interactivity and dynamic functionality to webpages. It enables features like form validation, animations, and real-time updates by manipulating HTML and CSS. Integrated with HTML and CSS, JavaScript creates engaging, user-driven web experiences.</p>
+
+                    <!-- Ideate -->
+                    <div class="step-card" data-step="3">
+                        <div class="step-header">
+                            <div class="step-number">3</div>
+                            <h3>Ideate</h3>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-image">
+                                <img src="img/ideate.jpg" alt="Brainstorming Session" />
+                            </div>
+                            <div class="step-description">
+                                <p>I explored various layout options through sketching and wireframing. Key ideas included modular content blocks, interactive elements for project details, and a consistent color scheme reflecting professionalism and creativity.</p>
+                                <p class="example-highlight">Example: I experimented with card-based layouts to present projects, allowing users to focus on specific work without information overload.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prototype -->
+                    <div class="step-card" data-step="4">
+                        <div class="step-header">
+                            <div class="step-number">4</div>
+                            <h3>Prototype</h3>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-image">
+                                <img src="./img/4.png" alt="Website Prototyping" />
+                            </div>
+                            <div class="step-description">
+                                <p>I built a low-fidelity prototype using paper and digital tools to test navigation flow. This evolved into a high-fidelity prototype with interactive elements, allowing me to simulate user interactions and gather feedback on usability.</p>
+                                <p class="example-highlight">Example: The initial prototype revealed that users struggled to find my contact information, leading to its prominent placement in subsequent versions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Test -->
+                    <div class="step-card" data-step="5">
+                        <div class="step-header">
+                            <div class="step-number">5</div>
+                            <h3>Test</h3>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-image">
+                                <img src="img/test.jpg" alt="User Testing Session" />
+                            </div>
+                            <div class="step-description">
+                                <p>User testing with 5 participants uncovered issues with mobile navigation and content hierarchy. I iterated on the design, simplifying menus and enhancing visual cues for important sections.</p>
+                                <p class="example-highlight">Example: A participant suggested adding hover effects to project cards, which I implemented to improve interaction and highlight clickable elements.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

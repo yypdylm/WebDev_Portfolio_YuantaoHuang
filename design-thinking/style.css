@@ -1,49 +1,106 @@
-/* 内容整体下移（关键调整） */
+/* 内容整体下移 */
 .content-spacing {
-    padding-top: 32.5px; /* 增大顶部间距，将内容整体下移更多 */
+    padding-top: 32.5px;
     padding-bottom: 40px;
 }
 
-/* 技术栈水平排列 + 交互效果 */
-.tech-stack {
+/* 设计步骤流程 */
+.design-steps-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* 步骤卡片样式 */
+.step-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid #eaeaea;
+}
+
+.step-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    border-color: #dcdcdc;
+}
+
+/* 步骤头部样式 */
+.step-header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.step-number {
+    width: 36px;
+    height: 36px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.step-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.25rem;
+}
+
+/* 步骤内容样式 */
+.step-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem; /* 技术项之间的间距 */
 }
 
-.tech-item {
-    flex: 1 1 calc(33.333% - 2rem); /* 每个技术项占据三分之一宽度减去间距 */
-    min-width: 300px; /* 最小宽度 */
+.step-image {
+    flex: 1;
+    min-width: 300px;
     padding: 1.5rem;
+}
+
+.step-image img {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease; /* 平滑过渡效果 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.tech-item:hover {
-    transform: scale(1.05); /* 鼠标悬停时内容放大5% */
+.step-description {
+    flex: 2;
+    padding: 1.5rem;
 }
 
-.square-logo {
-    width: 100px; /* 图标宽度 */
-    height: 100px; /* 图标高度 */
-    object-fit: contain;
+.step-description p {
+    color: #666;
+    line-height: 1.6;
     margin-bottom: 1rem;
 }
 
-.tech-desc h3 {
-    margin-top: 0;
-    color: #333;
+.example-highlight {
+    background-color: #f7f7f7;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+    font-style: italic;
 }
 
-.tech-desc p {
-    color: #666;
-    line-height: 1.6;
-}
-
-/* 响应式设计（小屏幕下垂直排列） */
+/* 响应式设计 */
 @media (max-width: 768px) {
-    .tech-item {
-        flex-basis: 100%; /* 在小屏幕上，每个技术项占据整行 */
+    .step-content {
+        flex-direction: column;
+    }
+    
+    .step-image,
+    .step-description {
+        padding: 1rem 1.5rem;
     }
 }
