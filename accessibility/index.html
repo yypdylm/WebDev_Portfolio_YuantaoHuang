@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Accessibility</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../homepage/style.css"> <!-- 复用全局样式 -->
+    <link rel="stylesheet" href="style.css"> <!-- 专属样式 -->
+</head>
+<body>
+    <!-- 导航栏（复用全局样式） -->
+    <nav class="fixed-nav">
+        <ul class="nav-list">
+            <li><a href="../homepage/index.html" class="nav-link">Home Page</a></li>
+            <li><a href="../portfolio/index.html" class="nav-link">Portfolio</a></li>
+            <li><a href="../design-thinking/index.html" class="nav-link">Design Thinking</a></li>
+            <li><a href="../un/index.html" class="nav-link">UN Global Goals</a></li>
+            <li><a href="index.html" class="nav-link current">Accessibility Statement</a></li>
+            <li><a href="../curtain/index.html" class="nav-link">Behind the Curtain</a></li>
+        </ul>
+    </nav>
+
+    <main class="content accessibility-content">
+        <div class="container">
+            <h2>Accessibility</h2>
+            <p>The following are the accessibility features of this website:</p>
+
+            <div class="accessibility-cards">
+                <!-- 键盘导航支持 -->
+                <div class="accessibility-card">
+                    <img src="./img/1.png" alt="Keyboard Supporting" class="card-image">
+                    <div class="card-content">
+                        <h3>Keyboard Supporting</h3>
+                        <p>To facilitate users who cannot use the mouse, I have added keyboard navigation support to the navigation bar. Users can switch between navigation links using the left and right arrow keys and access the links using the Enter key.</p>
+                    </div>
+                </div>
+
+                <!-- 高对比度颜色 -->
+                <div class="accessibility-card">
+                    <img src="./img/2.png" alt="pic of example" class="card-image">
+                    <div class="card-content">
+                        <h3>High Contrast Color</h3>
+                        <p>I use high-contrast color combinations, such as yellow and black, to highlight important elements, such as the hover and focus states of navigation links. This helps visually impaired users identify and interact more easily.</p>
+                    </div>
+                </div>
+
+                <!-- 图像替代文本 -->
+                <div class="accessibility-card">
+                    <img src="./img/3.png" alt="card" class="card-image">
+                    <div class="card-content">
+                        <h3>"Cards"</h3>
+                        <p>There are a large number of card elements in my web design. It is poker cards that inspired me to create this effect. This design can help people focus on the current elements and facilitate their reading of the text and acquisition of information.</p>
+                    </div>
+                </div>
+
+                <!-- 响应式设计 -->
+                <div class="accessibility-card">
+                    <img src="img/responsive-design.jpg" alt="See? This is how image alternative text works!" class="card-image">
+                    <div class="card-content">
+                        <h3>Image Alternative Text</h3>
+                        <p>The alt attribute in HTML plays a crucial role in web accessibility. It provides alternative text for images, which can be read by screen readers, helping visually impaired users understand the content of the images. When an image fails to load, the alt text will be displayed, ensuring that users can still get the necessary information. Additionally, search engines can also use alt text to understand the content of images.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 By Yuantao H.</p>
+    </footer>
+
+    <script src="../homepage/main.js"></script> <!-- 全局脚本 -->
+    <script src="main.js"></script> <!-- 专属脚本 -->
+</body>
+</html>

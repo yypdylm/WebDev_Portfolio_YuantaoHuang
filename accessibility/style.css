@@ -1,0 +1,52 @@
+/* 无障碍访问页面专属样式 */
+.accessibility-content {
+    padding: 6rem 2rem 4rem; /* 调整顶部间距，避开固定导航栏 */
+}
+
+.accessibility-cards {
+    display: flex;
+    flex-direction: column; /* 让卡片垂直排列 */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.accessibility-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex; /* 使用 flex 布局 */
+    width: 100%; /* 让卡片宽度占满父容器 */
+}
+
+.accessibility-card:hover {
+    transform: scale(1.02);
+}
+
+.card-image {
+    width: 25%; /* 图片宽度占卡片的 25% */
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+    width: 70%; /* 内容区域宽度占卡片的 70% */
+}
+
+.card-content h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}

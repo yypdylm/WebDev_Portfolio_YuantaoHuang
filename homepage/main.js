@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 键盘导航支持
     const navLinks = document.querySelectorAll('.nav-link');
-    let currentIndex = -1;
+    let currentIndex = 0;
     
     navLinks.forEach((link, index) => {
         link.addEventListener('focus', () => {
@@ -34,9 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks[currentIndex].focus();
         }
     });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
     const profileImg = document.getElementById('profileImg');
     const bgMusic = document.getElementById('bgMusic');
 
@@ -51,10 +49,4 @@ document.addEventListener('DOMContentLoaded', () => {
             bgMusic.pause();
         }
     });
-
-    // 处理浏览器自动播放限制
-    document.body.addEventListener('click', function handleFirstInteraction() {
-        bgMusic.play().catch(() => {}); // 尝试播放，失败则忽略
-        document.body.removeEventListener('click', handleFirstInteraction);
-    }, { once: true });
 });

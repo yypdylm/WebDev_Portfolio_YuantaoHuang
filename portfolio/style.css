@@ -13,16 +13,31 @@
     gap: 2rem;
 }
 
-#works video {
+.section-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.section-box:hover {
+    transform: scale(1.02); /* 鼠标悬停卡片放大2%，可按需调整 */
+}
+
+#works video,
+.hobby-image {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px; /* 调整圆角半径，使边框圆润 */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
-#works video:hover {
-    transform: scale(1.02);
+#works video:hover,
+.hobby-image:hover {
+    transform: scale(1.02); /* 鼠标悬停时视频或图片放大2%，可按需调整 */
 }
 
 .timeline {
@@ -41,4 +56,43 @@
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+}
+
+/* 新增样式，让视频和文字左右排列 */
+.hobby-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.media-container {
+    flex: 1;
+}
+
+.text-container {
+    flex: 2;
+}
+
+/* 画画部分的图片布局 */
+.drawing-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.drawing-col {
+    flex: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    #works .row {
+        grid-template-columns: 1fr;
+    }
+    .hobby-item {
+        flex-direction: column;
+    }
+    .drawing-row {
+        flex-direction: column;
+    }
 }

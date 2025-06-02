@@ -15,7 +15,7 @@
             <li><a href="index.html" class="nav-link current">Portfolio</a></li>
             <li><a href="../design-thinking/index.html" class="nav-link">Design Thinking</a></li>
             <li><a href="../un/index.html" class="nav-link">UN Global Goals</a></li>
-            <li><a href="#" class="nav-link">Accessibility Statement</a></li>
+            <li><a href="../accessibility/index.html" class="nav-link">Accessibility Statement</a></li>
             <li><a href="../curtain/index.html" class="nav-link">Behind the Curtain</a></li>
         </ul>
     </nav>
@@ -23,7 +23,7 @@
     <main class="content portfolio-content">
         <div class="container">
             <!-- 个人信息部分 -->
-            <section id="info">
+            <section id="info" class="section-box">
                 <h2>Self Intro</h2>
                 <div class="row">
                     <div class="col">
@@ -44,39 +44,75 @@
                 </div>
             </section>
 
-            <!-- 技能部分 -->
-            <section id="skills">
-                <h2>My Skill</h2>
+            <!-- 吉他爱好部分 -->
+            <section id="guitar-hobby" class="section-box">
+                <h2>Hobbies - Guitar</h2>
                 <div class="row">
-                    <div class="col">HTML 5</div>
-                    <div class="col">CSS3</div>
-                    <div class="col">JavaScript</div>
+                    <div class="col">
+                        <div class="hobby-item">
+                            <div class="media-container">
+                                <video width="480" height="270" controls>
+                                    <source src="./video/guitar.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="text-container">
+                                <p>I have just learned the guitar for three months. Here is my performance video.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <!-- 爱好与视频部分 -->
-            <section id="works">
-                <h2>Hobbies</h2>
+            <!-- 潜水爱好部分 -->
+            <section id="diving-hobby" class="section-box">
+                <h2>Hobbies - Scuba Diving</h2>
                 <div class="row">
                     <div class="col">
-                        <video width="480" height="270" controls>
-                            <source src="./video/guitar.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p>Guitar</p>
+                        <div class="hobby-item">
+                            <div class="media-container">
+                                <video width="480" height="270" controls>
+                                    <source src="./video/diving.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="text-container">
+                                <p>I'm an aow Diver (Advanced Open Water Diver). This is the video I shot at a depth of 30 meters underwater when diving in Malaysia last summer.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col">
-                        <video width="480" height="270" controls>
-                            <source src="./video/diving.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <p>Scuba Diving</p>
+                </div>
+            </section>
+
+            <!-- 画画爱好部分 -->
+            <section id="drawing-hobby" class="section-box">
+                <h2>Hobbies - Drawing</h2>
+                <div class="row drawing-row">
+                    <div class="col drawing-col">
+                        <div class="hobby-item">
+                            <div class="media-container">
+                                <img src="./img/1.png" alt="Drawing 1" class="hobby-image">
+                            </div>
+                            <div class="text-container">
+                                <p>This is my favourite anime character, Ijichi Nijika.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col drawing-col">
+                        <div class="hobby-item">
+                            <div class="media-container">
+                                <img src="./img/2.png" alt="Drawing 2" class="hobby-image">
+                            </div>
+                            <div class="text-container">
+                                <p>This is Kano Chinatsu.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- 经历部分 -->
-            <section id="story">
+            <section id="story" class="section-box">
                 <h2>Experience</h2>
                 <div class="row">
                     <div class="col">
