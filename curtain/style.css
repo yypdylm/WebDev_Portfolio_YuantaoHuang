@@ -4,6 +4,28 @@
     padding-bottom: 40px;
 }
 
+/* 主要内容卡片样式 */
+.section-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+}
+
+.section-card h2 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
 /* 技术栈水平排列 + 交互效果 */
 .tech-stack {
     display: flex;
@@ -41,9 +63,137 @@
     line-height: 1.6;
 }
 
+/* 1. 代码截图部分样式 */
+.screenshot-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.screenshot-card {
+    flex: 1 1 calc(33.333% - 1.5rem);
+    min-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.screenshot-card:hover {
+    transform: translateY(-5px);
+}
+
+.screenshot-placeholder {
+    height: 200px;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.placeholder-text {
+    color: #999;
+    font-style: italic;
+}
+
+.screenshot-title {
+    margin: 1rem;
+    color: #333;
+}
+
+.screenshot-desc {
+    margin: 0 1rem 1.5rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* 2. 挑战性部分解释样式 */
+.challenge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.challenge-card {
+    flex: 1 1 calc(50% - 1.5rem);
+    min-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.challenge-card:hover {
+    transform: translateY(-5px);
+}
+
+.challenge-title {
+    margin-top: 0;
+    color: #333;
+}
+
+.challenge-content {
+    margin-top: 1rem;
+}
+
+.challenge-problem, .challenge-solution, .challenge-learned {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.challenge-placeholder {
+    margin: 0 0 1rem;
+    color: #666;
+    line-height: 1.5;
+    min-height: 40px;
+    background-color: #f9f9f9;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+/* 4. 学习收获部分样式 */
+.learning-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.learning-card {
+    flex: 1 1 calc(50% - 1.5rem);
+    min-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.learning-card:hover {
+    transform: translateY(-5px);
+}
+
+.learning-icon {
+    font-size: 2rem;
+    min-width: 40px;
+    text-align: center;
+}
+
+.learning-title {
+    margin-top: 0;
+    color: #333;
+}
+
+.learning-content {
+    color: #666;
+    line-height: 1.5;
+}
+
 /* 响应式设计（小屏幕下垂直排列） */
 @media (max-width: 768px) {
-    .tech-item {
-        flex-basis: 100%; /* 在小屏幕上，每个技术项占据整行 */
+    .tech-item, .screenshot-card, .challenge-card, .learning-card {
+        flex-basis: 100%; /* 在小屏幕上，每个卡片占据整行 */
     }
 }

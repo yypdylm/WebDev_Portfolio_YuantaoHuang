@@ -24,33 +24,156 @@
         <!-- 新增间距容器，控制整体内容下移 -->
         <div class="content-spacing">
             <div class="container">
-                <!-- 技术栈标题与引言 -->
-                <section id="tech-stack-intro">
+                <!-- 1. 代码截图部分 -->
+                <div class="section-card">
+                    <h2>Screenshots of Your Code</h2>
+                    <p>展示关键代码片段的截图，帮助理解实现细节和技术选择。</p>
+                    
+                    <!-- 代码截图卡片容器 -->
+                    <div class="screenshot-container">
+                        <!-- 截图卡片1 - 占位 -->
+                        <div class="screenshot-card">
+                            <div class="screenshot-placeholder">
+                                <p>代码截图区域 1</p>
+                                <p class="placeholder-text">上传你的代码截图</p>
+                            </div>
+                            <h3 class="screenshot-title">关键功能实现</h3>
+                            <p class="screenshot-desc">在此处添加代码截图和简要说明...</p>
+                        </div>
+                        
+                        <!-- 截图卡片2 - 占位 -->
+                        <div class="screenshot-card">
+                            <div class="screenshot-placeholder">
+                                <p>代码截图区域 2</p>
+                                <p class="placeholder-text">上传你的代码截图</p>
+                            </div>
+                            <h3 class="screenshot-title">核心算法实现</h3>
+                            <p class="screenshot-desc">在此处添加代码截图和简要说明...</p>
+                        </div>
+                        
+                        <!-- 截图卡片3 - 占位 -->
+                        <div class="screenshot-card">
+                            <div class="screenshot-placeholder">
+                                <p>代码截图区域 3</p>
+                                <p class="placeholder-text">上传你的代码截图</p>
+                            </div>
+                            <h3 class="screenshot-title">模块化设计</h3>
+                            <p class="screenshot-desc">在此处添加代码截图和简要说明...</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2. 挑战性部分解释 -->
+                <div class="section-card">
+                    <h2>Explanation of Challenging Parts</h2>
+                    <p>分析开发过程中遇到的主要挑战，以及你是如何解决它们的。</p>
+                    
+                    <!-- 挑战卡片容器 -->
+                    <div class="challenge-container">
+                        <!-- 挑战卡片1 - 占位 -->
+                        <div class="challenge-card">
+                            <h3 class="challenge-title">挑战 1</h3>
+                            <div class="challenge-content">
+                                <p class="challenge-problem">问题描述：</p>
+                                <p class="challenge-placeholder">在此处描述你遇到的问题...</p>
+                                
+                                <p class="challenge-solution">解决方案：</p>
+                                <p class="challenge-placeholder">在此处描述你是如何解决问题的...</p>
+                                
+                                <p class="challenge-learned">学到的经验：</p>
+                                <p class="challenge-placeholder">在此处描述你从中学到了什么...</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 挑战卡片2 - 占位 -->
+                        <div class="challenge-card">
+                            <h3 class="challenge-title">挑战 2</h3>
+                            <div class="challenge-content">
+                                <p class="challenge-problem">问题描述：</p>
+                                <p class="challenge-placeholder">在此处描述你遇到的问题...</p>
+                                
+                                <p class="challenge-solution">解决方案：</p>
+                                <p class="challenge-placeholder">在此处描述你是如何解决问题的...</p>
+                                
+                                <p class="challenge-learned">学到的经验：</p>
+                                <p class="challenge-placeholder">在此处描述你从中学到了什么...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3. 开发者工具使用 -->
+                <div class="section-card">
                     <h2>Tech Stack & Tools</h2>
                     <p>This project applies Design-Thinking methodology, focusing on modular development based on repository structure (e.g., <code>homepage</code>, <code>portfolio</code> modules) to ensure code maintainability and user experience. Below are the core technologies and tools used:</p>
-                </section>
-
-                <!-- 技术栈展示（水平排列 + 交互效果） -->
-                <div class="tech-stack">
-                    <div class="tech-item">
-                        <img src="img/html.png" class="square-logo" alt="HTML5">
-                        <div class="tech-desc">
-                            <h3>HTML5</h3>
-                            <p>HTML is the core of web development, defining the content and structure of a webpage. It organizes text, images, and multimedia through tags and supports page navigation. Together with CSS and JavaScript, HTML builds the framework and functionality of modern webpages.</p>
+                    
+                    <!-- 技术栈展示（水平排列 + 交互效果） -->
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <img src="img/html.png" class="square-logo" alt="HTML5">
+                            <div class="tech-desc">
+                                <h3>HTML5</h3>
+                                <p>HTML is the core of web development, defining the content and structure of a webpage. It organizes text, images, and multimedia through tags and supports page navigation. Together with CSS and JavaScript, HTML builds the framework and functionality of modern webpages.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="img/css.svg" class="square-logo" alt="CSS3">
+                            <div class="tech-desc">
+                                <h3>CSS3</h3>
+                                <p>CSS (Cascading Style Sheets) is essential in web development, controlling the visual presentation and layout of a webpage. It styles HTML elements with properties like colors, fonts, and spacing, ensuring an attractive and consistent design. By working with HTML and JavaScript, CSS enhances user experience through responsive and visually appealing interfaces.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <img src="img/js.png" class="square-logo" alt="JavaScript">
+                            <div class="tech-desc">
+                                <h3>JavaScript</h3>
+                                <p>JavaScript is a key programming language in web development, adding interactivity and dynamic functionality to webpages. It enables features like form validation, animations, and real-time updates by manipulating HTML and CSS. Integrated with HTML and CSS, JavaScript creates engaging, user-driven web experiences.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="tech-item">
-                        <img src="img/css.svg" class="square-logo" alt="CSS3">
-                        <div class="tech-desc">
-                            <h3>CSS3</h3>
-                            <p>CSS (Cascading Style Sheets) is essential in web development, controlling the visual presentation and layout of a webpage. It styles HTML elements with properties like colors, fonts, and spacing, ensuring an attractive and consistent design. By working with HTML and JavaScript, CSS enhances user experience through responsive and visually appealing interfaces.</p>
+                </div>
+                
+                <!-- 4. 从过程中学到的经验 -->
+                <div class="section-card">
+                    <h2>What You Learned From the Process</h2>
+                    <p>分享你在开发过程中的主要收获和经验教训。</p>
+                    
+                    <!-- 学习收获容器 -->
+                    <div class="learning-container">
+                        <!-- 学习收获卡片1 - 占位 -->
+                        <div class="learning-card">
+                            <div class="learning-icon">
+                                <span>💡</span>
+                            </div>
+                            <h3 class="learning-title">主要收获 1</h3>
+                            <p class="learning-content placeholder-text">在此处描述你从项目中学到的主要经验...</p>
                         </div>
-                    </div>
-                    <div class="tech-item">
-                        <img src="img/js.png" class="square-logo" alt="JavaScript">
-                        <div class="tech-desc">
-                            <h3>JavaScript</h3>
-                            <p>JavaScript is a key programming language in web development, adding interactivity and dynamic functionality to webpages. It enables features like form validation, animations, and real-time updates by manipulating HTML and CSS. Integrated with HTML and CSS, JavaScript creates engaging, user-driven web experiences.</p>
+                        
+                        <!-- 学习收获卡片2 - 占位 -->
+                        <div class="learning-card">
+                            <div class="learning-icon">
+                                <span>🚀</span>
+                            </div>
+                            <h3 class="learning-title">主要收获 2</h3>
+                            <p class="learning-content placeholder-text">在此处描述你从项目中学到的主要经验...</p>
+                        </div>
+                        
+                        <!-- 学习收获卡片3 - 占位 -->
+                        <div class="learning-card">
+                            <div class="learning-icon">
+                                <span>👨💻</span>
+                            </div>
+                            <h3 class="learning-title">主要收获 3</h3>
+                            <p class="learning-content placeholder-text">在此处描述你从项目中学到的主要经验...</p>
+                        </div>
+                        
+                        <!-- 学习收获卡片4 - 占位 -->
+                        <div class="learning-card">
+                            <div class="learning-icon">
+                                <span>🌟</span>
+                            </div>
+                            <h3 class="learning-title">主要收获 4</h3>
+                            <p class="learning-content placeholder-text">在此处描述你从项目中学到的主要经验...</p>
                         </div>
                     </div>
                 </div>
