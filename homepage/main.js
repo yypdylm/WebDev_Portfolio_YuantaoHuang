@@ -68,3 +68,10 @@ const backToTopBtn = document.getElementById('backToTopBtn');
             behavior: 'smooth'
         });
     });
+
+        const allLinks = document.querySelectorAll('a');
+    allLinks.forEach(link => {
+        const originalHref = link.href.split('?')[0]; // 获取原始链接
+        const timestamp = new Date().getTime(); // 使用时间戳作为随机参数
+        link.href = `${originalHref}?t=${timestamp}`; // 添加时间戳到链接
+    });
