@@ -208,3 +208,33 @@ footer {
 .profile-img:hover {
     transform: scale(1.05); /* 仅放大5%，更加轻微 */
 }
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ffd100;
+    color: #000000ef;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    transition: all 0.3s ease; /* 添加过渡动画 */
+}
+
+#backToTopBtn:hover {
+    transform: scale(1.05); /* 悬停时略微放大 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* 悬停时显示阴影 */
+}
+
+#backToTopBtn:active {
+    transform: scale(1.1); /* 点击时进一步放大 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* 点击时增强阴影 */
+}
