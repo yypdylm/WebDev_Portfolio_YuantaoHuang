@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     profileImg.addEventListener('click', () => {
         if (bgMusic.paused) {
             bgMusic.play().catch(e => {
-                console.error('自动播放失败:', e);
-                alert('请先与页面交互后再播放音乐');
+                console.error('error:', e);
+                alert('error');
             });
         } else {
             bgMusic.pause();
