@@ -236,5 +236,5 @@ footer {
 
 #backToTopBtn:active {
     transform: scale(1.1); /* 点击时进一步放大 */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* 点击时增强阴影 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* 点击时增强阴影。 */
 }
