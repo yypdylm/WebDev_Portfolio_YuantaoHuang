@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    font-family: 'Montserrat', sans-serif; /* 修改为新字体 */
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -17,87 +17,55 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    height: 3.5rem;
     background: rgba(0, 0, 0, 0.8);
-    padding-top: 1rem;
-    padding-bottom: -1rem;
     z-index: 1000;
 }
 
 .nav-list {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    align-items: center;
+    height: 100%;
 }
 
-/* 导航链接基础样式 */
 .nav-link {
-    display: inline-block;
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    height: 100%;
     text-decoration: none;
-    padding: 0.4rem 0.5rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    position: relative;
-    font-size: 0.5rem;
+    color: white;
     font-weight: bold;
-    background-color: #444; /* 基础灰色背景 */
+    font-size: 1rem;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* 交互状态（鼠标悬停/键盘焦点） */
+/* 当前页面 */
+.nav-link.current {
+    color: #ffd100;
+}
+
+
 .nav-link:hover,
 .nav-link:focus {
-    background-color: #ffd100; /* 悬停时变黄 */
-    color: #000; /* 文字变黑 */
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    outline: none;
-}
-
-/* 当前页面样式 */
-.nav-link.current {
-    background-color: #444; /* 保持灰色背景 */
-    color: white;
-    border: 2px solid #ffd100; /* 黄色边框 */
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 209, 0, 0.6); /* 黄色光晕 */
-}
-
-/* 当前页面 + 交互状态 */
-.nav-link.current:hover,
-.nav-link.current:focus {
-    background-color: #ffd100; /* 悬停时变黄 */
-    color: #000;
-}
-
-/* 底部指示器 */
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: #ffd100;
-    transition: width 0.5s ease;
-}
-
-.nav-link:hover::after,
-.nav-link.current::after {
-    width: 100%;
+    color: #ffd100;
 }
 
 /* 英雄区域 */
 .hero {
     height: 100vh;
-    background: 
-        linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), /* 白色遮罩，80%透明度 */
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
         url('./img/background.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #333; /* 文字颜色改为深色，适应白色背景 */
+    color: #333;
     text-align: center;
-    padding-top: 4rem;
+    padding-top: 5rem;
 }
 
 .hero-content {
@@ -115,6 +83,12 @@ body {
     border-radius: 50%;
     border: 3px solid white;
     object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
 }
 
 .hero-text h1 {
@@ -142,7 +116,7 @@ body {
     background: white;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -179,18 +153,22 @@ footer {
     .nav-list {
         flex-direction: column;
         align-items: center;
-        gap: 0.8rem;
     }
-    
+
+    .nav-link {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
     .hero-content {
         gap: 1rem;
     }
-    
+
     .profile-img {
         width: 150px;
         height: 150px;
     }
-    
+
     .hero-text h1 {
         font-size: 1.8rem;
     }
@@ -201,16 +179,7 @@ footer {
     outline: 3px solid #ffd100;
 }
 
-/* 头像悬停效果 */
-.profile-img {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.profile-img:hover {
-    transform: scale(1.05); /* 仅放大5%，更加轻微 */
-}
-
+/* 回到顶部按钮 */
 #backToTopBtn {
     display: none;
     position: fixed;
@@ -228,15 +197,15 @@ footer {
     font-size: 18px;
     text-align: center;
     line-height: 40px;
-    transition: all 0.3s ease; /* 添加过渡动画 */
+    transition: all 0.3s ease;
 }
 
 #backToTopBtn:hover {
-    transform: scale(1.05); /* 悬停时略微放大 */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* 悬停时显示阴影 */
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 #backToTopBtn:active {
-    transform: scale(1.1); /* 点击时进一步放大 */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* 点击时增强阴影。 */
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
