@@ -176,9 +176,6 @@ footer {
 
 /* 无障碍焦点样式 */
 :focus-visible {
-    /* 去掉默认 outline */
-    outline: none; 
-    /* 用 box-shadow 模拟带圆角的焦点外框 */
     box-shadow: 0 0 0 3px #ffd100; 
     border-radius: 8px; /* 配合圆角，按需调整数值 */
 }
@@ -217,4 +214,12 @@ footer {
 /* 页脚 */
 footer {
     background: hsl(0, 0%, 0%);
+}
+
+.code-img {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
